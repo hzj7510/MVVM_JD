@@ -1,0 +1,121 @@
+{
+    
+    "basicInfo": {
+        "gift": false,
+        "downPrice": false,
+        "venderId": "1000015707",
+        "isPop": false,
+        "isOP": false,
+        "videoInfo": {},
+        "bookInfo": {
+            "author": "[日]山下英子",
+            "display": true,
+            "publisher": "中国友谊出版公司"
+        },
+        "ebook": null,
+        "accessoryList": null,
+        "OPInfo": {},
+        "chatUrl": "https://m.360buyimg.com/n3/jfs/t1009/295/2698002/349631/f697da48/54d99cd1Ncc1203bc.jpg.webp",
+        "name": "断舍离·升级实操篇",
+        "isOPImage": "",
+        "couponInfo": {
+            "couponList": ["￥100减5", "￥200减16"],
+            "url": "https://sale.jd.com/m/act/LNivkgwQ7A.html"
+        },
+        "wareId": "11654174",
+        "abTest": {
+            "suitABTest": 0,
+            "colorSizeABTest": 1
+        },
+        "isShadowSku": null,
+        "yanBaoInfo": {},
+        "shopIndex": null,
+        "appPromotion": {
+            "url": "https://e.m.jd.com/promote.html?chanel=jdreader204gift",
+            "isOpen": true
+        },
+        "wareImage": [{
+                      "share": "https://m.360buyimg.com/mobilecms/s120x120_g14/M08/02/1C/rBEhVVKTFS0IAAAAAA_j-r58ly0AAGDhwMntooAD-QS088.jpg!q70.jpg",
+                      "big": "https://m.360buyimg.com/mobilecms/s720x720_g14/M08/02/1C/rBEhVVKTFS0IAAAAAA_j-r58ly0AAGDhwMntooAD-QS088.jpg!q70.jpg.webp",
+                      "small": "https://m.360buyimg.com/mobilecms/s720x720_g14/M08/02/1C/rBEhVVKTFS0IAAAAAA_j-r58ly0AAGDhwMntooAD-QS088.jpg!q70.jpg.webp"
+                      }, {
+                      "big": "https://m.360buyimg.com/mobilecms/s720x720_jfs/t2095/245/1456841933/636593/754a093/569f1809N9e08b2d9.jpg!q70.jpg.webp",
+                      "small": "https://m.360buyimg.com/mobilecms/s720x720_jfs/t2095/245/1456841933/636593/754a093/569f1809N9e08b2d9.jpg!q70.jpg.webp"
+                      }, {
+                      "big": "https://m.360buyimg.com/mobilecms/s720x720_jfs/t2005/162/1348627792/474071/b63316be/569f1830Nf2bc5dcb.jpg!q70.jpg.webp",
+                      "small": "https://m.360buyimg.com/mobilecms/s720x720_jfs/t2005/162/1348627792/474071/b63316be/569f1830Nf2bc5dcb.jpg!q70.jpg.webp"
+                      }, {
+                      "big": "https://m.360buyimg.com/mobilecms/s720x720_jfs/t2326/82/1779630656/278799/a7e8a235/5680f0a2Nd9434cbf.jpg!q70.jpg.webp",
+                      "small": "https://m.360buyimg.com/mobilecms/s720x720_jfs/t2326/82/1779630656/278799/a7e8a235/5680f0a2Nd9434cbf.jpg!q70.jpg.webp"
+                      }, {
+                      "big": "https://m.360buyimg.com/mobilecms/s720x720_jfs/t2059/101/1156912652/201246/c8412bf8/5680f0a7Na4b6a74f.jpg!q70.jpg.webp",
+                      "small": "https://m.360buyimg.com/mobilecms/s720x720_jfs/t2059/101/1156912652/201246/c8412bf8/5680f0a7Na4b6a74f.jpg!q70.jpg.webp"
+                      }, {
+                      "big": "https://m.360buyimg.com/mobilecms/s720x720_jfs/t2566/187/1024467753/155913/7ab994f8/5680f0aeNed618901.jpg!q70.jpg.webp",
+                      "small": "https://m.360buyimg.com/mobilecms/s720x720_jfs/t2566/187/1024467753/155913/7ab994f8/5680f0aeNed618901.jpg!q70.jpg.webp"
+                      }, {
+                      "big": "https://m.360buyimg.com/mobilecms/s720x720_g13/M0A/0B/06/rBEhVFIxfCEIAAAAAAEYVBZWzigAADFFwNq-hUAARhs317.jpg!q70.jpg.webp",
+                      "small": "https://m.360buyimg.com/mobilecms/s720x720_g13/M0A/0B/06/rBEhVFIxfCEIAAAAAAEYVBZWzigAADFFwNq-hUAARhs317.jpg!q70.jpg.webp"
+                      }, {
+                      "big": "https://m.360buyimg.com/mobilecms/s720x720_g13/M0A/0B/06/rBEhU1IxfCIIAAAAAAFANzLKwVEAADFFwOjybcAAUBP098.jpg!q70.jpg.webp",
+                      "small": "https://m.360buyimg.com/mobilecms/s720x720_g13/M0A/0B/06/rBEhU1IxfCIIAAAAAAFANzLKwVEAADFFwOjybcAAUBP098.jpg!q70.jpg.webp"
+                      }, {
+                      "big": "https://m.360buyimg.com/mobilecms/s720x720_g13/M0A/0B/06/rBEhUlIxfCMIAAAAAACBa8rK6nQAADFFwO0gRAAAIGD580.jpg!q70.jpg.webp",
+                      "small": "https://m.360buyimg.com/mobilecms/s720x720_g13/M0A/0B/06/rBEhUlIxfCMIAAAAAACBa8rK6nQAADFFwO0gRAAAIGD580.jpg!q70.jpg.webp"
+                      }],
+        "cartImage": "https://m.360buyimg.com/n5/jfs/t1009/295/2698002/349631/f697da48/54d99cd1Ncc1203bc.jpg!q50.jpg.webp",
+        "ebayinfo": {
+            "isEbay": false
+        },
+        "category": "1713;3267;3467",
+        "readInfo": {
+            "tryReadUrl": null,
+            "isTryRead": false
+        },
+        "service": {
+            "service": "由京东发货并提供售后服务",
+            "isPostByJd": true,
+            "serviceIconUrl": "https://m.360buyimg.com/mobilecms/jfs/t2176/234/1856411458/2044/91ae040b/5680f585N70da96a6.png",
+            "shortService": "京东发货&售后"
+        },
+        "shareUrl": "https://item.m.jd.com/product/11654174.html",
+        "ad": {}
+    },
+    "recommendInfo": {
+        "recommendList": null
+    },
+    "other": {
+        "supportSizeType": 0
+    },
+    "shopInfo": {
+        "customerService": {
+            "hasChat": false,
+            "hasJimi": false,
+            "mLink": "https://m.jd.com/product/11654174.html",
+            "online": false
+        },
+        "shop": {
+            "shopId": 1000015707,
+            "name": "永正图书",
+            "score": 0.0,
+            "url": "https://ok.jd.com/m/index-1000015707.htm",
+            "logo": "https://img30.360buyimg.com/popshop/jfs/t3280/296/3096724714/29303/a15facbc/57eb7a85N52dd33fa.jpg",
+            "followCount": 1047,
+            "newNum": 0,
+            "promotionNum": 0,
+            "hasCoupon": false,
+            "brief": "书适生活 悦读人生",
+            "venderType": "1",
+            "diamond": false,
+            "wareScore":9.4,
+            "avgWareScore":9.5,
+            "efficiencyScore":9.3,
+            "avgEfficiencyScore":9.5,
+            "serviceScore":9.4,
+            "avgServiceScore":9.5,
+            "shopActivityTotalNum": 0,
+            "totalNum": 451
+        }
+    },
+    "rankInfo": {}
+}

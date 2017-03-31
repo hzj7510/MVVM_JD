@@ -1,0 +1,20 @@
+{
+        "couponInfo": [{
+                       "timeDesc": "有效期5天",
+                       "limitType": 1,
+                       "couponKind": 1,
+                       "couponType": 1,
+                       "beginTime": "2017-03-28 11:17:32",
+                       "applicability": true,
+                       "batchId": 34939621,
+                       "endTime": "2017-04-02 11:17:32",
+                       "discount": 20,
+                       "quota": 120,
+                       "area": 1,
+                       "encryptedKey": "8a176244c7274e15ad8aaa6e174ab2ef",
+                       "addDays": 5,
+                       "name": "仅可购买京东自营图书音像商品",
+                       "userRiskLevel": -1,
+                       "roleId": 5569854
+                       }]
+}

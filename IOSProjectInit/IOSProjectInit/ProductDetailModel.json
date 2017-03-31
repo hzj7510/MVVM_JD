@@ -1,0 +1,211 @@
+{
+    "wareInfo": {
+        "priceLabel": "¥",
+        "easyBuy": true,
+        "recommendInfo": {
+            "recommendList": null
+        },
+        "pcPrice": {},
+        "toABTest": false,
+        "isXnzt": "0",
+        "promotion": {
+            "gift": [{
+                     "num":"1",
+                     "text":"赠品",
+                     "link":"",
+                     "skuId":"2818327",
+                     "value":"惠泽(Huzo) SATA3硬盘数据线0.5米 蓝色 (直对弯/HZ-S1611 )（赠完即止）"
+                     }],
+            "isTwoLine": true,
+            "packABTest": 0,
+            "tipImage": "https://m.360buyimg.com/mobilecms/jfs/t3307/72/5314423715/1964/bdf8e959/586ca1efN7daf7c96.png",
+            "suit": [{
+                     "PackListPrice":"￥748.00",
+                     "PackType":"0",
+                     "PackPrice":"￥738.00",
+                     "MainSkuPicUrl":"jfs/t190/186/2141292795/122626/fdcc7bb5/53c5d2adN62e5aa4c.jpg.webp",
+                     "MainSkuId":675971,
+                     "PackId":4646525,
+                     "Discount":"￥10.00",
+                     "PackName":"WD存储黄金搭档",
+                     "MainSkuName":"西部数据(WD)蓝盘 1TB SATA6Gb/s 7200转64M 台式机硬盘(WD10EZEX)",
+                     "ProductList":[
+                                    {
+                                    "SkuId":4024786,
+                                    "SkuPicUrl":"jfs/t3706/87/1031888167/58599/f441ea71/581ada0aNafc5ac5f.jpg.webp",
+                                    "SkuName":"西部数据(WD) Green系列 120G 固态硬盘(WDS120G1G0A)"
+                                    }
+                                    ]
+                     }],
+            "domain": "https://m.360buyimg.com/n3/",
+            "activityTip": "\"满减\"\"多买优惠\"仅可任选其一，可在购物车更改",
+            "prompt": "",
+            "activity": [{
+                         "promoId": "197217573",
+                         "proSortNum": 3,
+                         "text": "满减",
+                         "link": "",
+                         "value": "满100.00减30.00，满200.00减60.00，满300.00减100.00",
+                         "skuId": ""
+                         }, {
+                         "promoId": "196935805",
+                         "proSortNum": 4,
+                         "text": "多买优惠",
+                         "link": "",
+                         "value": "满1件，每加16.90元即可在购物车换购热销商品",
+                         "skuId": ""
+                         }],
+            "tip": ""
+        },
+        "yuyueInfo": {
+            "isYuYue": false,
+            "yuyueType": "5",
+            "yuYueEndTime": "-1",
+            "buyStartTime": "-1",
+            "yuYueStartTime": "-1",
+            "buyEndTime": "-1",
+            "yuyueNum": 0
+        },
+        "fare": "",
+        "isCollect": false,
+        "iconList": [{
+                     "imageUrl": "https://img30.360buyimg.com/mobilecms/g14/M09/0B/19/rBEhVlLL0JYIAAAAAAAGL2-g5qgAAHzDgGMHOgAAAZH481.jpg",
+                     "name": "次日达",
+                     "tip": "指定时间前下单，次日送达"
+                     }, {
+                     "imageUrl": "https://img30.360buyimg.com/mobilecms/g13/M06/10/11/rBEhUlLL13kIAAAAAAAEeT_oUHcAAHskQP_-boAAASR577.jpg",
+                     "name": "货到付款",
+                     "tip": "支持送货上门后再收款，支持现金、POS机刷卡等方式"
+                     }, {
+                     "imageUrl": "https://img30.360buyimg.com/mobilecms/g15/M0A/01/02/rBEhWlLL0P8IAAAAAAAETM3054QAAHqzwGz1eAAAARk092.jpg",
+                     "name": "自提",
+                     "tip": "我们提供多种自提服务，包括京东自提点、京东校园派、自助提货柜、移动自提车等服务，自提订单满49元免运费，不足金额订单收取3元/单运费。"
+                     }, {
+                     "imageUrl": "https://img30.360buyimg.com/mobilecms/g15/M0A/10/0C/rBEhWFMxH-oIAAAAAAAEs-McyP4AAKp8AP_4HYAAATL229.jpg",
+                     "name": "99元免基础运费",
+                     "tip": "所选地址自营订单满99元免基础运费，不足金额订单收取6元/单基础运费。"
+                     }],
+        "rankInfo": {
+            "rankList": [],
+            "isBookSku": false
+        },
+        "jprice": {
+            "name": "京东价：",
+            "value": "69.10",
+            "display": true
+        },
+        "buyMaxNum": 200,
+        "accessoryList": null,
+        "YuShouInfo": {
+            "tailMoneyStartTime": null,
+            "yuShouType": null,
+            "yuShou3LadderData": null,
+            "tailMoney": null,
+            "yuShouPrice": null,
+            "yushouStepType": null,
+            "yuShouNumOfPeople": null,
+            "yushouRule": null,
+            "isMergedBuy": false,
+            "yuShouDeposit": null,
+            "countdownNumMills": null,
+            "tailMoneyEndTime": null,
+            "yuShouladder": null,
+            "mergedBuyText": "",
+            "mergedLogoText": "",
+            "isYuShou": false,
+            "yuShounowStage": null,
+            "expectedDeliveryDate": null
+        },
+        "warmTips": [{
+                     "text": "支持7天无理由退货",
+                     "imageUrl": "https://m.360buyimg.com/mobilecms/jfs/t1918/274/1086575987/1970/bc766f2d/5680f4b3N24b48659.png",
+                     "fontColor": ""
+                     }],
+        "isPluginEnable": true,
+        "stock": "现货，16:00前完成下单,预计明天(03月23日)送达",
+        "msTrailer": "",
+        "cutInfo": {
+            "isCut": false
+        },
+        "wareId": "11683280",
+        "mprice": {
+            "name": "定价：",
+            "value": "96.00",
+            "display": true
+        },
+        "shopABTest": "a",
+        "is7shortService": "七天退货",
+        "originPrice": "69.10",
+        "discount": {
+            "desc": "折",
+            "display": true,
+            "discount": "7.2"
+        },
+        "xnztTips": {},
+        "is7ToReturn": true,
+        "eventParam": {
+            "sep": "{\"area\":\"13_2900_3533_25716\",\"sku\":[[\"11683280\",\"69.10\",\"现货，16:00前完成下单,预计明天(03月23日)送达\",\"33\",\"0\"]]}"
+        },
+        "cdn": {
+            "isCdnOpen": true,
+            "isWebpOpen": true,
+            "isReportData": true
+        },
+        "stockNotice": false,
+        "defaultAddr": {
+            "provinceId": "13",
+            "provinceName": "山东",
+            "cityId": "2900",
+            "cityName": "济宁市",
+            "countyId": "3533",
+            "countyName": "任城区",
+            "townId": "25716",
+            "townName": "廿里铺街道"
+        },
+        "ad": {
+            "adword": "春季阅读惠！30万种图书满100减30满200减60满300减100！每天限量抢120减20优惠券，叠券更优惠！立即查看活动>",
+            "adLinkContent": "立即查看活动>",
+            "adLink": "https://sale.jd.com/act/ykY82hC5Gs3Sx4ew.html"
+        },
+        "whiteBarInfo": {
+            "isLogin": true,
+            "marketingText": "",
+            "planInfos": [{
+                          "rate": "0.00",
+                          "plan": 1,
+                          "laterPay": "69.10",
+                          "planFee": "0.00"
+                          }, {
+                          "rate": "0.60",
+                          "plan": 3,
+                          "laterPay": "23.45",
+                          "planFee": "0.41"
+                          }, {
+                          "rate": "0.60",
+                          "plan": 6,
+                          "laterPay": "11.93",
+                          "planFee": "0.41"
+                          }, {
+                          "rate": "0.60",
+                          "plan": 12,
+                          "laterPay": "6.17",
+                          "planFee": "0.41"
+                          }, {
+                          "rate": "0.60",
+                          "plan": 24,
+                          "laterPay": "3.29",
+                          "planFee": "0.41"
+                          }],
+            "isAva": true,
+            "url": "https://s.jr.jd.com/baitiao/index.action",
+            "isBtUser": true
+        },
+        "promiseShowNum": 3,
+        "cartFlag": true,
+        "flashInfo": {
+            "state": 0,
+            "cd": 0
+        }
+    },
+    "code": "0"
+}
