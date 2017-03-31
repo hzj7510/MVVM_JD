@@ -1,4 +1,117 @@
-# MVVM_JendModel]]] subscribeNext:^(id x) {
+# MVVM
+
+>写在文章之前，这是我第一次用MVVM来写小Demo。工作一年多才敢写MVVM，一来：从初次使用RAC到认识RAC就花了不少时间，二来：一直在思考如何去写MVVM。现在感觉时候到了，于是就写了这么一个Demo。我认为学习编程最直接的就是去仿写个什么东西，这样你就会发现很多问题，成长的才会更快。当然感觉现在写的也会有很多问题，希望大家指点，发出来的目的也是希望更多人看到，能给更多的建议。
+
+MVVM这个东西，看似神秘，其实本质与MVC没什么差别(这句话说的装逼了些)。
+
+>首先要说明一下，用MVVM前，最好先了解一下RAC，查了很多资料，发现这两个基本是不分家的。其次就是，如果你合理使用RAC，即使你用的是MVC，也会减轻C很大的压力。所以RAC是个好东西，可惜我还不是很精通(这句话就很舒服了)。
+
+分享我知道的一个不错的视频:虽然时间比较早，但是都是精髓。
+https://pan.baidu.com/s/1hr8omLA
+我是通过这个视频了解的RAC，但是我开始了解RAC的时候却是半年之后。所以大家不要着急，慢慢摸索。
+
+话不多说，进入正题，这里我们来模仿JD详情页来做一下。
+
+先来看一下界面
+
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-981e5388df3ca0e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-7c954a353b7aecf1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+当看到这两个界面的时候，我有点方了，好像没什么规律的样子。
+
+虽然我陆续看了好几个界面，突然意识到一件事，这大概跟数据有关，让我们来看一下数据，这里我们可以使用Charles青花瓷来抓取一下。
+
+####开始我们真正的第一步，数据抓取
+
+推荐Charles文章：http://blog.devtang.com/2015/11/14/charles-introduction/
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-d3d265fda674b4bf.png)
+
+>这里简单说一下，在你连接上后可能会发现有很多的数据上有一把小锁，这是在提醒你，你需要一个叫做SSL的证书，安装完成后，点击右键，然后点击一下Enbale SSL Proxying，然后重新抓取一下试试，像上图一样。
+
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-b04415eb2e6905df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+这里面就是我们需要的数据。
+
+>不好意思写文章喜欢听歌，左下角是歌词，大家见谅。
+
+这两个文件就是我们需要的。
+
+如果只看第一个请求，你会发现标题山下英子并找不到，所以还需要下面的规格详情的请求。而且下面的这个请求里还包含了店铺信息，还有轮播图的信息。
+
+OK，数据有了，由于考虑到种种问题，我没有使用网络请求，所以我将数据都保存成了.json的文件，后续使用延时来模仿一下网络请求。
+
+于是就有了这几个文件。
+
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-e7e75982603eecf1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+这几个json在我们刚才抓的里面都有，大家可以找找看看。什么？你问我怎么知道的，我也不知道 ，我也是一个一个试的。
+
+####第二步，UI分析
+
+有了数据，接下来分析一下界面。
+首先有几个是肯定有的
+- 轮播
+- 商品简介
+- 价格
+- 已选
+- 地址
+- 最下面的小标签
+
+我截了一张相对比较全的一张图
+
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-ee71c4d79c800188.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+也就是说
+- 折扣
+- 优惠券
+- 促销
+- 作者 
+- 出版社
+- 电子版
+
+这些都是根据数据来的
+
+####第三步界面搭建
+
+OK，接下来就是比较复杂的搭建view。这里我就不一一介绍了，大家可以去github上去看一下我的。
+
+先来分析一下Views的目录
+
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-889051361978fd58.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+说一下两个让我纠结很长时间的地方。
+
+1.一个是促销，让我纠结很久，如果使用tableview有些过于复杂，使用其他方式又如何实现自适应呢？
+于是我使用的是Masonry的特性，根据数据使用for循环来创建多个label，然后更新self的Masonry，设置lastview的mas_bottom距离self为-15就像这样。
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-2f2d7770c0d3362f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+2.就是最后那些小标签怎么显示，使用collectionView？感觉也过于麻烦了，最后发现可以通过NSAttributedString来实现。
+
+这样问题貌似就都解决了。
+
+####第四步就是数据解析了
+
+我们先来创建Model，Model我推荐大家使用ESJSONFormat这个第三方插件。可以快速创建Models，方便的大家使用。本来像个大家截图，但是发现截图貌似有问题，那我就直接发一下目录截图吧。
+
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-95e626f5fed09cc3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+每个类里面都是ESJSONFormat生成的样式，没有做很多的修改，只是每个类的.m中加了setValue forUndefinedKey这个方法，用来防止发过来的数据键值对不全。
+
+View也有了Model也有了，其实大家会发现，在MVVM中View与Model基本是没有变化的，重点在于新添加的ViewModel与Controller之间的改变。
+
+####第五步，让我们看看我们可爱的ViewModel
+首先，要明确的是ViewModel是将Controller中的数据处理抽取出来，以简化Controller的复杂度，于是我的理解是，从请求开始就要在ViewModel中了，于是我们需要模拟一下网络请求。
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-ee321ca762d22710.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+```
+-(RACSignal *)setupModel{
+	    @weakify(self);
+		    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+				        @strongify(self);
+						        [[RACSignal combineLatest:@[[self setupDescModel], [self setupAuthorModel], [self setupCommentModel], [self setupCouponModel], [self setupRecommendModel]]] subscribeNext:^(id x) {
 									            
 									            [self rebackDescModel];
 												            [self rebackCommentModel];
