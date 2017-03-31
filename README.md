@@ -109,21 +109,22 @@ View也有了Model也有了，其实大家会发现，在MVVM中View与Model基�
 ```
 -(RACSignal *)setupModel{
 	    @weakify(self);
-		    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-				        @strongify(self);
-						        [[RACSignal combineLatest:@[[self setupDescModel], [self setupAuthorModel], [self setupCommentModel], [self setupCouponModel], [self setupRecommendModel]]] subscribeNext:^(id x) {
+		return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+			@strongify(self);
+			[[RACSignal combineLatest:@[[self setupDescModel], [self setupAuthorModel], [self setupCommentModel], [self setupCouponModel], [self setupRecommendModel]]] subscribeNext:^(id x) {
 									            
-									            [self rebackDescModel];
-												            [self rebackCommentModel];
-															            [self rebackRecommendModel];
-																		            [self rebackShopModel];
-																					            
-																					            RACTuple *tuple = [RACTuple tupleWithObjects: @([self rebackType]), nil];
-																								            
-																								            [subscriber sendNext:tuple];
-																											        }];
-								        return nil;
-										    }];
+				[self rebackDescModel];
+				[self rebackCommentModel];
+				[self rebackRecommendModel];
+				[self rebackShopModel];
+			
+				RACTuple *tuple = [RACTuple tupleWithObjects: @([self rebackType]), nil];
+						
+				[subscriber sendNext:tuple];
+										
+			}];
+			return nil;
+		 }];
 }
 ```
 setupModel是我们对外提供的接口，Controller通过调用setupModel方法来发送网络请求。由于有多个请求，所以这里使用combineLatest方法来监听所有请求都请求完成，方法里的reBack...，这几个方法是对数据的再次解析，只需要分解出界面需要的数据。
@@ -135,17 +136,18 @@ setupModel是我们对外提供的接口，Controller通过调用setupModel方�
 ```
 -(RACSignal *)setupDescModel{
 	    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-			        [[RACScheduler mainThreadScheduler]afterDelay:0.5 schedule:^{
-						            NSDictionary *dic = [self readJsonFile:@"ProductDetailModel.json"];
-									            self.productInfo = [Wareinfo mj_objectWithKeyValues:dic[@"wareInfo"]];
-												            [subscriber sendNext:@"1"];
-															            [subscriber sendCompleted];
-																		        }];
+			[[RACScheduler mainThreadScheduler]afterDelay:0.5 schedule:^{
+				NSDictionary *dic = [self readJsonFile:@"ProductDetailModel.json"];
+				self.productInfo = [Wareinfo mj_objectWithKeyValues:dic[@"wareInfo"]];
+				[subscriber sendNext:@"1"];
+				[subscriber sendCompleted];
+
+			}];
 					        
-					        return [RACDisposable disposableWithBlock:^{
+			return [RACDisposable disposableWithBlock:^{
 								            
-								        }];
-							    }];
+			}];
+		}];
 }
 ```
 我们需要分析一下这个方法
@@ -168,41 +170,41 @@ setupModel是我们对外提供的接口，Controller通过调用setupModel方�
 typedef enum : NSUInteger {
 	    PRODUCTVIEWTYPENONE = 1 << 0,
 		    /**
-			       *  自营
-				        */
-		    PRODUCTVIEWTYPEWITHSELF= 1 << 1,
-			    /**
-				       *  全球购
-					        */
-			    PRODUCTVIEWTYPEWITHGLOBAL = 1 << 2,
-				    /**
-					       *  是否有广告
-						        */
-				    PRODUCTVIEWTYPEWITHAD = 1 << 3,
-					    /**
-						       *  打折优惠
-							        */
-					    PRODUCTVIEWTYPEDISCOUNT = 1 << 4,
-						    /**
-							       *  原价
-								        */
-						    PRODUCTVIEWTYPEMPRICE = 1 << 5,
-							    /**
-								       *  促销
-									        */
-							    PRODUCTVIEWTYPEPROMOTION = 1 << 6,
-								    /**
-									       *  优惠券
-										        */
-								    PRODUCTVIEWTYPECOUPON = 1 << 7,
-									    /**
-										       *  作者
-											        */
-									    PRODUCTVIEWTYPEAUTHOR = 1 << 8,
-										    /**
-											       *  出版社
-												        */
-										    PRODUCTVIEWTYPEPRESS = 1 << 9,
+			 *  自营
+	         */
+		PRODUCTVIEWTYPEWITHSELF= 1 << 1,
+			/**
+		     *  全球购
+	         */
+		PRODUCTVIEWTYPEWITHGLOBAL = 1 << 2,
+		    /**
+		     *  是否有广告
+	         */
+	    PRODUCTVIEWTYPEWITHAD = 1 << 3,
+		    /**
+		      *  打折优惠
+		      */
+	    PRODUCTVIEWTYPEDISCOUNT = 1 << 4,
+		    /**
+     	      *  原价
+			  */
+		PRODUCTVIEWTYPEMPRICE = 1 << 5,
+		    /**
+		      *  促销
+		      */
+		PRODUCTVIEWTYPEPROMOTION = 1 << 6,
+			/**
+			  *  优惠券
+			  */
+		PRODUCTVIEWTYPECOUPON = 1 << 7,
+			/**
+			  *  作者
+			  */
+	    PRODUCTVIEWTYPEAUTHOR = 1 << 8,
+			/**
+			  *  出版社
+			  */
+	    PRODUCTVIEWTYPEPRESS = 1 << 9,
 											    
 } PRODUCTVIEWTYPE;
 ```
