@@ -321,3 +321,4 @@ pod update --verbose --no-repo-update
 到这里算是结束了。
 
 简书地址:http://www.jianshu.com/p/345b741231a9
+个人blog:http://hezhengjian.com/
