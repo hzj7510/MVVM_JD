@@ -91,6 +91,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-IOSProjectInit/ReactiveCocoa.framework"
   install_framework "Pods-IOSProjectInit/SDWebImage.framework"
   install_framework "Pods-IOSProjectInit/SVProgressHUD.framework"
+  install_framework "Pods-IOSProjectInit/libwebp.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-IOSProjectInit/AFNetworking.framework"
@@ -100,4 +101,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-IOSProjectInit/ReactiveCocoa.framework"
   install_framework "Pods-IOSProjectInit/SDWebImage.framework"
   install_framework "Pods-IOSProjectInit/SVProgressHUD.framework"
+  install_framework "Pods-IOSProjectInit/libwebp.framework"
 fi

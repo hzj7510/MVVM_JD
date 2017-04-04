@@ -337,8 +337,8 @@
     
     for (int i = 0; i < scrollImgsArray.count; i++) {
         UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth * i, 0, kScreenWidth, kScreenWidth)];
-//        [imgView sd_setImageWithURL:[NSURL URLWithString:scrollImgsArray[i]]];
-        imgView.backgroundColor = kRGB((10 + 20 * i), (255 - 20 * i), 255, 1);
+        [imgView sd_setImageWithURL:[NSURL URLWithString:scrollImgsArray[i]]];
+//        imgView.backgroundColor = kRGB((10 + 20 * i), (255 - 20 * i), 255, 1);
         [_scrollView addSubview:imgView];
     }
 }

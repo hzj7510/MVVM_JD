@@ -22,6 +22,7 @@
     @autoreleasepool{
         // do not decode animated images
         if (image.images) { return image; }
+    
         CGImageRef imageRef = image.CGImage;
     
         CGImageAlphaInfo alpha = CGImageGetAlphaInfo(imageRef);
