@@ -275,5 +275,49 @@ Cloning into '/var/folders/qc/115mp6bj7hq0wjrmyqvhsvqm0000gn/T/d20170331-5309-1t
 fatal: unable to access 'https://chromium.googlesource.com/webm/libwebp/': Failed to connect to chromium.googlesource.com port 443: Operation timed out
 ```
 大家不要急，待我弄好之后会回来更新的，我还会回来的！
+***
+强势分割线，欢迎回来的我！
+***
+清明时节雨纷纷，虽然没有下雨但是听着歌，也挺不错。
+
+言归正传，我们来解决一下webp格式问题，之前提到使用SDWebView无法解决webp格式图片问题。突然发现我误会人家了，人家提供了处理webp格式的方法。
+
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-24868eb1b47d7c18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+来我们来翻译一下这句话的意思，默认只引入了Core，如果你需要Webp你需要明确引入，也就是需要在Podfile中需要添加
+```
+pod 'SDWebImage/WebP'
+```
+于是我们的Podfile变成了这样
+
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-dcf133a42ee58716.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+恩，官网这么说，那就这么来吧。
+
+执行:
+```
+pod update --verbose --no-repo-update
+```
+如果你看了下面的界面，不要担心很正常。原因，连接googlesource失败，恩，谁让webp是人家google发明的呢，很开心，中国由于限制连不上google的。于是你需要一个终极的方法VPN，只有这个能拯救你。
+
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-caaf90fcad38d4f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+使用后。
+
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-3eea396dbe8d65f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+安装完成后，你需要看一个地方
+
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-896c77dc986866e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+如果你发现这里没有SD_WEBP=1需要加上，然后使用就很简单了。
+
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-b50ef18b8d37cdd5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+跟平时使用sd_webImage一样。运行！
+
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/1503554-7524c5acfbd823f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+到这里算是结束了。
 
 简书地址:http://www.jianshu.com/p/345b741231a9
